@@ -13,9 +13,10 @@ export class AirDataLandingComponent implements OnInit {
   displayData: any;
 
   constructor(private http: HttpClient) {
-    if (sessionStorage.getItem('data') == undefined) {
+    if (sessionStorage.getItem('data') == (undefined || null)) {
       this.http.get<any>('https://api.tvmaze.com/schedule?country=US').subscribe(data => {
         this.data = data;
+        this.displayData = this.data;
         sessionStorage.setItem('data', JSON.stringify(this.data));
       });
     } else {
@@ -33,6 +34,7 @@ export class AirDataLandingComponent implements OnInit {
     this.displayData = result;
   }
   reset() {
+    this.searchText = '';
     this.displayData = this.data;
   }
 
