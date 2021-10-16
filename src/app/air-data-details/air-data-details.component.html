@@ -1,0 +1,22 @@
+<div class="details-wrapper">
+    <div class="details-header">
+        Program details
+    </div>
+    <div class="details-container" *ngIf="item">
+        <div class="data">
+            <img [src]="item.show.image.medium">
+        </div>
+        <div class="id data">
+            <b>ID:</b> {{item.id}}
+        </div>
+        <div class="name data" >
+            <b>Name:</b> {{item.name}}
+        </div>
+        <div class="air-date data"> 
+            <b>Air Date:</b> {{item.airdate}}
+        </div>
+        <div class="summary data">
+            <b>Summary:</b> <span [innerHTML]="item.summary"></span>
+        </div>
+    </div>
+</div>
