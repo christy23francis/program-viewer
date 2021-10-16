@@ -1,0 +1,16 @@
+.details-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 20px;
+    .details-header {
+        font-weight: bold;
+        font-size: 24px;
+        padding-bottom: 20px;
+    }
+    .details-container {
+        .data {
+            padding: 10px 0;
+        }
+    }
+}
